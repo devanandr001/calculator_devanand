@@ -73,7 +73,6 @@ class CalcAppState extends State<CalcApp> {
         ),
         backgroundColor: Color(0xFF283637),
         body: Container(
-          padding: EdgeInsets.all(1),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
@@ -107,13 +106,14 @@ class CalcAppState extends State<CalcApp> {
                 ),
                 alignment: Alignment(1.0, 1.0),
               ),
-              SizedBox(height: 30,),
+              SizedBox(
+                height: 30,
+              ),
 
               //AC,C,%,/
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-
                   CalcButton(
                     text: 'AC',
                     fillColor: 0xFF6C807F,
