@@ -12,7 +12,7 @@ class CalcButton extends StatelessWidget {
     Key key,
     this.text ,
     this.fillColor,
-    this.textColor = 0xF,
+    this.textColor = 0xFFFFEB3B,
     this.textSize = 28,
     this.callback,
   }) : super(key: key);
@@ -20,10 +20,9 @@ class CalcButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: EdgeInsets.all(1),
         child: SizedBox(
-          width: 65,
-          height: 65,
+          width: MediaQuery.of(context).size.width/4,
+          height: MediaQuery.of(context).size.height/10,
           child: ElevatedButton(
             onPressed: () {
               callback(text);
@@ -38,12 +37,6 @@ class CalcButton extends StatelessWidget {
                 ),
               ),
             ),
-            // style: ElevatedButton.styleFrom(
-            //   padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
-            //   shape: RoundedRectangleBorder(
-            //       borderRadius: BorderRadius.circular(10.0)),
-            // ),
-
             style: ElevatedButton.styleFrom(
               padding: EdgeInsets.symmetric(horizontal: 0.0, vertical: 0.0),
               // padding: EdgeInsets.,
@@ -51,11 +44,8 @@ class CalcButton extends StatelessWidget {
               backgroundColor: fillColor != null ? Color(fillColor) : Colors.orange,
               // backgroundColor: Color(fillColor):null,
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20.0)),
+                  borderRadius: BorderRadius.circular(100.0)),
             ),
-
-            // color: fillColor != null ? Color(fillColor) : null,
-            // child: Color(textColor),
           ),
         ));
   }
